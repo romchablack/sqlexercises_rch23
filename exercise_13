@@ -1,0 +1,10 @@
+Exercise: 13 (Serge I: 2002-11-02)
+Find out the average speed of the PCs produced by maker A.
+
+
+SELECT AVG(speed)
+FROM PC
+WHERE model IN (
+SELECT model 
+FROM Product 
+WHERE maker='A')
